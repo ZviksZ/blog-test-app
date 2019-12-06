@@ -1,0 +1,72 @@
+.blogWrap {
+    margin-top: 50px;
+    margin-bottom: 200px;
+    h2 {
+        margin-bottom: 15px;
+    }
+}
+.blogItemsList {
+    padding-left: 0;
+}
+.blogItem {
+    position: relative;
+    margin-bottom: 15px;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    border: 1px solid rgba(0, 0, 0, 0.125) !important;
+    cursor: pointer;
+    
+}
+
+.itemTitle {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.buttons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    button {
+        margin-right: 7px;
+        margin-top: 2px;
+    }
+}
+
+.shortText, .bigText {
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px black dotted;
+    border-radius: 5px;
+}
+
+.commentsItem {
+    list-style: none;
+    position: relative;
+    button {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+    }
+}
+
+.blog-exit-active {
+    animation: blog 800ms ease-out forwards;
+}
+.blog-enter-active {
+    animation: blog 800ms ease-in alternate-reverse;
+}
+
+@keyframes blog {
+    0% {
+        transform: translateX(0);
+    }
+    30% {
+        opacity: .7;
+        transform: translateX(30px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+}

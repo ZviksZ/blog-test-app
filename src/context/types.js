@@ -1,0 +1,6 @@
+export const ADD_BLOG_ITEM = 'ADD_BLOG_ITEM'
+export const DELETE_BLOG_ITEM = 'DELETE_BLOG_ITEM'
+export const EDIT_BLOG_ITEM = 'EDIT_BLOG_ITEM'
+
+export const ADD_COMMENT = 'ADD_COMMENT'
+export const DELETE_COMMENT = 'DELETE_COMMENT'
