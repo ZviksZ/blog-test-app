@@ -2,7 +2,6 @@ import React, {useContext} from 'react'
 import {BlogContext}       from "../../context/blog/blogContext.js";
 import {BlogItem}          from "./BlogItem/BlogItem.jsx";
 import styles              from "./BlogItemsList.module.scss"
-import {TransitionGroup} from 'react-transition-group'
 
 
 export const BlogItemsList = ({blogItems}) => {
@@ -13,8 +12,7 @@ export const BlogItemsList = ({blogItems}) => {
          <h2>Список статей</h2>
          {
             blogItems.length ?
-               <TransitionGroup component="ul" className={styles.blogItemsList}>
-               
+               <ul className={styles.blogItemsList}>
                   {blogItems.map((blog, i) => <BlogItem key={blog.id}
                                                         item={blog}
                                                         index={i}
@@ -22,7 +20,7 @@ export const BlogItemsList = ({blogItems}) => {
                                                         deleteComment={deleteComment}
                                                         editBlogItem={editBlogItem}
                                                         removeBlogItem={removeBlogItem}/>)}
-               </TransitionGroup>
+               </ul>
                :
                <p>Здесь пока ничего нет.</p>
          }

@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import styles from './SimpleForm.module.css'
 
 export const SimpleForm = ({itemId, onSubmit}) => {
    const [authorName, setAuthorName] = useState('')
@@ -17,7 +18,7 @@ export const SimpleForm = ({itemId, onSubmit}) => {
    }
 
    return (
-      <form onSubmit={submitHandler}>
+      <form onSubmit={submitHandler} className={styles.commentsForm}>
          <h5>Добавить комментарий</h5>
          <div className="form-group">
             <input

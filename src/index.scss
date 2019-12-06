@@ -14,3 +14,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+}
+
+.blog-enter {
+  opacity: 0;
+}
+.blog-enter-active {
+  transition: opacity 500ms ease-out;
+  opacity: 1;
+}
+.blog-exit-active {
+  transition: opacity 350ms ease-out;
+  opacity: 0;
+}
+

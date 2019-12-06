@@ -9,7 +9,7 @@ import {
 const handlers = {
    [ADD_BLOG_ITEM]: (state, {payload}) => ({
       ...state,
-      blogItems: [...state.blogItems, payload]
+      blogItems: [payload,...state.blogItems]
    }),
    [DELETE_BLOG_ITEM]: (state, {payload}) => ({
       ...state,

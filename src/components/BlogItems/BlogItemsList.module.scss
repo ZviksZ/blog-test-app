@@ -21,6 +21,7 @@
 .itemTitle {
     margin-top: 40px;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .buttons {
@@ -29,44 +30,37 @@
     right: 0;
     button {
         margin-right: 7px;
-        margin-top: 2px;
+        margin-top: 7px;
     }
 }
 
-.shortText, .bigText {
+.shortText {
     margin-top: 15px;
     padding: 10px;
-    border: 1px black dotted;
+    border: 1px black solid;
     border-radius: 5px;
 }
-
-.commentsItem {
-    list-style: none;
-    position: relative;
-    button {
-        position: absolute;
-        right: 5px;
-        top: 5px;
+.bigText {
+    margin-top: 15px;
+    padding: 10px;
+}
+.comments {
+    padding: 20px 0;
+}
+.commentsTitle {
+    margin-bottom: 20px;
+}
+.commentsList {
+    padding: 20px 0;
+    .commentsItem {
+        list-style: none;
+        position: relative;
+        button {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+        }
     }
 }
 
-.blog-exit-active {
-    animation: blog 800ms ease-out forwards;
-}
-.blog-enter-active {
-    animation: blog 800ms ease-in alternate-reverse;
-}
 
-@keyframes blog {
-    0% {
-        transform: translateX(0);
-    }
-    30% {
-        opacity: .7;
-        transform: translateX(30px);
-    }
-    100% {
-        opacity: 0;
-        transform: translateX(-200px);
-    }
-}

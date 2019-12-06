@@ -1,19 +1,16 @@
-import React, {useState, useContext} from 'react'
-import {BlogContext}                 from "../../context/blog/blogContext.js";
+import React, {useState} from 'react'
 
 export const BlogItemForm = ({initialTitle = '', shortTxt = '', bigTxt = '', onSubmit, itemId, setEditMode}) => {
    const [title, setTitle] = useState(initialTitle)
    const [shortText, setShortText] = useState(shortTxt)
    const [bigText, setBigText] = useState(bigTxt)
 
-   const {addBlogItem} = useContext(BlogContext)
-
    const clearFields = () => {
       setTitle('')
       setShortText('')
       setBigText('')
    }
-   
+
    const submitHandler = event => {
       event.preventDefault()
       if (itemId && setEditMode) {
@@ -21,7 +18,7 @@ export const BlogItemForm = ({initialTitle = '', shortTxt = '', bigTxt = '', onS
          setEditMode(false)
       } else {
          onSubmit(title, shortText, bigText)
-      }     
+      }
 
       clearFields()
    }
